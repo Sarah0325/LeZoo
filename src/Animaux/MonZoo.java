@@ -193,7 +193,7 @@ public class MonZoo {
 		String nom;
 		String espece;
 
-		float superficie = (float) (Math.random() * (MonZoo.MAX_SUPERFICIE - MonZoo.MIN_SUPERFICIE) + Zoo.MIN_SUPERFICIE);
+		float superficie = (float) (Math.random() * (MonZoo.MAX_SUPERFICIE - MonZoo.MIN_SUPERFICIE) + MonZoo.MIN_SUPERFICIE);
 		Scanner scan = new Scanner(System.in);
 		System.out.println("1 pour enclos standard , 2 pour aquarium, 3 pour voliere ");
 		choix = scan.nextInt();
