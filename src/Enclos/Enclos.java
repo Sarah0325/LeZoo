@@ -1,15 +1,16 @@
 package Enclos;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import Animaux.Animal;
 public class Enclos {
-	protected static int RATIO_TAILLE = 3;
-	protected String nom;
-	protected float superficie;
-	protected ArrayList<Animal> animals;
-	protected final String[] etatEnclos = { "mauvais", "à surveiller", "bon" };
-	protected String etat = etatEnclos[2];
-	protected String espece ;
+	public int RATIO_TAILLE = 3;
+	public String nom;
+	public float superficie;
+	public ArrayList<Animal> animals;
+	public final String[] etatEnclos = { "mauvais", "à surveiller", "bon" };
+	public String etat = etatEnclos[2];
+	public String espece ;
 
 	public Enclos(String nom, float superficie,String espece) {
 	this.nom = nom;
@@ -62,7 +63,7 @@ public class Enclos {
 	public int getQuantiteMax() {
 	if(animals.size() > 0)
 	return (int) (superficie / animals.get(0).getTailleMax() / RATIO_TAILLE);
-	else 
+	else
 	return 1;
 	}
 
@@ -106,13 +107,11 @@ public class Enclos {
 	+ Arrays.toString(etatEnclos) + "]";
 	}
 
-	@Override
 	public String Caracteristique() {
 	String carac = this.toString();
 	return carac;
 	}
 
-	@Override
 	public String Caracteristique(ArrayList<Animal> animals) {
 	String result = "";
 	for (Animal animal : animals) {
