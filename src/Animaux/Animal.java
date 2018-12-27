@@ -6,27 +6,25 @@ public abstract class Animal {
 		MALE, FEMELLE
 	};
 
-	protected static float POIDS_MAX;
-	protected static float POIDS_MIN;
-	protected static float TAILLE_MAX;
-	protected static float TAILLE_MIN;
-	protected static int AGE_MAX;
-	protected static int AGE_MIN;
+	protected float POIDS_MAX;
+	protected float POIDS_MIN;
+	protected float TAILLE_MAX;
+	protected float TAILLE_MIN;
+	protected int AGE_MAX;
+	protected int AGE_MIN;
 
 	protected static String nom;
 	protected static Sexe sexe;
-	protected static float poids;
-	protected static float taille;
-	protected static int age;
-	protected static boolean faim;
-	protected static boolean sommeil;
-	protected static boolean sante;
+	protected float poids;
+	protected float taille;
+	protected int age;
+	protected boolean faim;
+	protected boolean sommeil;
+	protected boolean sante;
 	protected static boolean aerien;
-	protected static boolean aquatique;
+	protected boolean aquatique;
 
-	public Animal(String nom, Sexe sexe, float poids, float taille, int age, boolean faim, boolean sommeil,
-			boolean sante) {
-		super();
+	public Animal(String nom) {
 		this.nom = nom;
 		this.sexe = Math.random() < 0.5 ? Sexe.MALE : Sexe.FEMELLE;
 		this.poids = (float) (Math.random() * (getPoidsMax() - getPoidsMin()) + getPoidsMin());
@@ -97,19 +95,19 @@ public abstract class Animal {
 	}
 
 	public float getTailleMax() {
-		return 0;
+		return this.TAILLE_MAX;
 	}
 
 	public float getTailleMin() {
-		return 0;
+		return this.TAILLE_MIN;
 	}
 
 	public float getPoidsMax() {
-		return 0;
+		return this.POIDS_MAX;
 	}
 
 	public float getPoidsMin() {
-		return 0;
+		return this.POIDS_MIN;
 	}
 
 	public boolean isFaim() {

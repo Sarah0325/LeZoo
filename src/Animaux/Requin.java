@@ -9,7 +9,7 @@ public class Requin extends Ovipare {
 	static enum PrenomF {
 		Odile, Olga, Olivia, Oceane
 	};
-
+	static String nom="Kriyo";
 	static float POIDS_MAX = 1100;
 	static float POIDS_MIN = 600;
 	static float TAILLE_MAX = 6f;
@@ -18,7 +18,7 @@ public class Requin extends Ovipare {
 	static int AGE_MIN = 1;
 
 	public Requin() {
-		super(nom, sexe, poids, taille, age, faim, sommeil, sante);
+		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
 		aquatique = true;
 		Random r = new Random();
 		if (sexe == Sexe.FEMELLE) {

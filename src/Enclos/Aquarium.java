@@ -24,5 +24,7 @@ public class Aquarium extends Enclos{
 		}
 		return false;
 	}
+	
+
 
 }
