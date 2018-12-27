@@ -1,4 +1,5 @@
 package Animaux;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Enclos.Aquarium;
@@ -15,6 +16,9 @@ public class MonZoo {
 	private final static String DEFAUT_ENCLOS = "Enclos";
 	private final static String DEFAUT_AQUARIUM = "Aquarium";
 	private final static String DEFAUT_VOLIERE = "Voliere";
+	private ArrayList<Voliere> lesvolieres = new ArrayList<Voliere>();
+	private ArrayList<Aquarium> lesaquariums = new ArrayList<Aquarium>();
+	private ArrayList<Enclos> lesenclos = new ArrayList<Enclos>();
 
 	public MonZoo(int nbEnclos, int nbAquarium, int nbVoliere) {
 		
@@ -94,7 +98,7 @@ public class MonZoo {
 		case 1:
 			Aigle a = new Aigle();
 			System.out.println("Coucou , je suis un " + a.toString());
-			for (Voliere voliere : zoo.getVoliere()) {
+			for (Voliere voliere : zoo.lesvolieres) {
 				if (voliere.ajouterAnimal(a)) {
 					break;
 				}
@@ -103,7 +107,7 @@ public class MonZoo {
 		case 2:
 			Baleine b = new Baleine();
 			System.out.println("Coucou , je suis une " + b.toString());
-			 for (Aquarium baleine : zoo.getAquarium()) {
+			 for (Aquarium aquarium : zoo.lesaquariums) {
 			 if (aquarium.ajouterAnimal(b)) {
 			 break;
 			 }
@@ -114,7 +118,7 @@ public class MonZoo {
 		case 3:
 			Girafe g = new Girafe();
 			System.out.println("Coucou , je suis une " + g.toString());
-			for (Enclos enclos : zoo.getEnclos()) {
+			for (Enclos enclos : zoo.lesenclos) {
 				if (enclos.ajouterAnimal(g)) {
 					break;
 				}
@@ -127,7 +131,7 @@ public class MonZoo {
 		case 5:
 			Lion l = new Lion();
 			System.out.println("Coucou , je suis un " + l.toString());
-			for (Enclos enclos : zoo.getEnclos()) {
+			for (Enclos enclos : zoo.lesenclos) {
 				if (enclos.ajouterAnimal(l)) {
 					break;
 				}
@@ -137,7 +141,7 @@ public class MonZoo {
 		case 6:
 			Loup lo = new Loup();
 			System.out.println("Coucou , je suis un " + lo.toString());
-			for (Enclos enclos : zoo.getEnclos()) {
+			for (Enclos enclos : zoo.lesenclos) {
 				if (enclos.ajouterAnimal(lo)) {
 					break;
 				}
@@ -147,7 +151,7 @@ public class MonZoo {
 		case 7:
 			Ours o = new Ours();
 			System.out.println("Coucou , je suis un " + o.toString());
-			for (Enclos enclos : zoo.getEnclos()) {
+			for (Enclos enclos : zoo.lesenclos) {
 				if (enclos.ajouterAnimal(o)) {
 					break;
 				}
@@ -160,7 +164,7 @@ public class MonZoo {
 		case 9:
 			Requin r = new Requin();
 			System.out.println("Coucou , je suis un " + r.toString());
-			for (Aquarium requin : zoo.getAquarium()) {
+			for (Aquarium aquarium : zoo.lesaquariums) {
 			if (aquarium.ajouterAnimal(r)) {
 					break;
 				}
@@ -171,7 +175,7 @@ public class MonZoo {
 		case 10:
 			Tigre t = new Tigre();
 			System.out.println("Coucou , je suis un " + t.toString());
-			for (Enclos enclos : zoo.getEnclos()) {
+			for (Enclos enclos : zoo.lesenclos) {
 				if (enclos.ajouterAnimal(t)) {
 					break;
 				}
