@@ -8,10 +8,10 @@ public class Loup extends Mammifere{
 	static float TAILLE_MAX=1.6f;
 	static float TAILLE_MIN =1.0f;
 	static int AGE_MAX=8;
-	int AGE_MIN=1;
+	static int AGE_MIN=1;
 	
 	public Loup() {
-		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
+		super(nom,sexe, POIDS_MAX, POIDS_MIN ,TAILLE_MAX, TAILLE_MIN, AGE_MAX, AGE_MIN);
 		Random r = new Random(); 
 		if (sexe == Sexe.FEMELLE ) {
 			nom = PrenomF.values()[r.nextInt(PrenomF.values().length)].toString();

@@ -1,12 +1,14 @@
 package Animaux;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import Enclos.Aquarium;
 import Enclos.Enclos;
 import Enclos.Voliere;
+
 public class MonZoo {
-	
+
 	public final static int MAX_ENCLOS = 60;
 	public final static int NB_ENCLOS = 20;
 	public final static int NB_AQUARIUM = 20;
@@ -21,11 +23,11 @@ public class MonZoo {
 	private ArrayList<Enclos> lesenclos = new ArrayList<Enclos>();
 
 	public MonZoo(int nbEnclos, int nbAquarium, int nbVoliere) {
-		
+
 	}
 
 	public static void main(String[] args) {
-		
+
 		int valeur = 0;
 
 		MonZoo zoo = new MonZoo(MonZoo.NB_ENCLOS, MonZoo.NB_AQUARIUM, MonZoo.NB_VOLIERE);
@@ -72,11 +74,11 @@ public class MonZoo {
 		Scanner scan = new Scanner(System.in);
 		action = scan.nextInt();
 		switch (action) {
-		case 1 : 
-			//nettoyer un enclos
+		case 1:
+			// nettoyer un enclos
 			break;
-		case 2 :
-			//nourrir les animaux 
+		case 2:
+			// nourrir les animaux
 			break;
 		}
 
@@ -107,13 +109,12 @@ public class MonZoo {
 		case 2:
 			Baleine b = new Baleine();
 			System.out.println("Coucou , je suis une " + b.toString());
-			 for (Aquarium aquarium : zoo.lesaquariums) {
-			 if (aquarium.ajouterAnimal(b)) {
-			 break;
-			 }
-			 }
-			
-			
+			for (Aquarium aquarium : zoo.lesaquariums) {
+				if (aquarium.ajouterAnimal(b)) {
+					break;
+				}
+			}
+
 			break;
 		case 3:
 			Girafe g = new Girafe();
@@ -126,6 +127,13 @@ public class MonZoo {
 
 			break;
 		case 4:
+			Goldfish gl = new Goldfish();
+			System.out.println("Coucou, je suis un " + gl.toString());
+			for (Aquarium aquarium : zoo.lesaquariums) {
+				if (aquarium.ajouterAnimal(gl)) {
+					break;
+				}
+			}
 
 			break;
 		case 5:
@@ -159,18 +167,22 @@ public class MonZoo {
 
 			break;
 		case 8:
-			// pingouin
-			break;
+			Pingouin pg = new Pingouin();
+			System.out.println("Coucouc je suis un" + pg.toString());
+			for (Aquarium aquarium : zoo.lesaquariums) {
+				if (aquarium.ajouterAnimal(pg)) {
+					break;
+				}
+			}
 		case 9:
 			Requin r = new Requin();
 			System.out.println("Coucou , je suis un " + r.toString());
 			for (Aquarium aquarium : zoo.lesaquariums) {
-			if (aquarium.ajouterAnimal(r)) {
+				if (aquarium.ajouterAnimal(r)) {
 					break;
 				}
 			}
-					break;
-					// requin
+			break;
 
 		case 10:
 			Tigre t = new Tigre();
@@ -181,7 +193,6 @@ public class MonZoo {
 				}
 			}
 
-	
 		default:
 			System.out.println("Valeur inconnue :" + choix);
 		}
@@ -193,7 +204,8 @@ public class MonZoo {
 		String nom;
 		String espece;
 
-		float superficie = (float) (Math.random() * (MonZoo.MAX_SUPERFICIE - MonZoo.MIN_SUPERFICIE) + MonZoo.MIN_SUPERFICIE);
+		float superficie = (float) (Math.random() * (MonZoo.MAX_SUPERFICIE - MonZoo.MIN_SUPERFICIE)
+				+ MonZoo.MIN_SUPERFICIE);
 		Scanner scan = new Scanner(System.in);
 		System.out.println("1 pour enclos standard , 2 pour aquarium, 3 pour voliere ");
 		choix = scan.nextInt();
@@ -214,7 +226,7 @@ public class MonZoo {
 			espece = scan.next();
 			Aquarium a = new Aquarium(nom, superficie, espece);
 			zoo.ajouterAquarium(a);
-			
+
 			break;
 		case 3:
 
@@ -224,28 +236,27 @@ public class MonZoo {
 			espece = scan.next();
 			Voliere v = new Voliere(nom, superficie, espece);
 			zoo.ajouterVoliere(v);
-			
+
 			break;
 		default:
 			System.out.println("Valeur inconnue :" + choix);
 		}
-		
 
 	}
 
 	private void ajouterVoliere(Voliere v) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void ajouterAquarium(Aquarium a) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void ajouterEnclos(Enclos e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

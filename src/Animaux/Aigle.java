@@ -13,7 +13,7 @@ public class Aigle extends Ovipare {
 	static int AGE_MIN=1;
 	
 	public Aigle() {
-		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
+		super(nom,sexe, POIDS_MAX, POIDS_MIN ,TAILLE_MAX, TAILLE_MIN, AGE_MAX, AGE_MIN);
 		aerien = true;
 		Random r = new Random(); 
 		if (sexe == Sexe.FEMELLE ) {

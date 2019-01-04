@@ -12,7 +12,7 @@ public class Girafe extends Mammifere{
 	
 
 	public Girafe() {
-		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
+		super(nom,sexe, POIDS_MAX, POIDS_MIN ,TAILLE_MAX, TAILLE_MIN, AGE_MAX, AGE_MIN);
 		Random r = new Random(); 
 		if (sexe == Sexe.FEMELLE ) {
 			nom = PrenomF.values()[r.nextInt(PrenomF.values().length)].toString();

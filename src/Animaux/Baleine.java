@@ -11,7 +11,7 @@ public class Baleine extends Mammifere{
 	static int AGE_MIN=1;
 	
 	public Baleine() {
-		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
+		super(nom,sexe, POIDS_MAX, POIDS_MIN ,TAILLE_MAX, TAILLE_MIN, AGE_MAX, AGE_MIN);
 		aquatique = true;
 		Random r = new Random(); 
 		if (sexe == Sexe.FEMELLE ) {

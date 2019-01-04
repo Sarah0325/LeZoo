@@ -24,11 +24,11 @@ public abstract class Animal {
 	protected static boolean aerien;
 	protected boolean aquatique;
 
-	public Animal(String nom) {
+	public Animal(String nom, float POIDS_MAX,float POIDS_MIN,float TAILLE_MAX,float TAILLE_MIN,int AGE_MAX,int AGE_MIN) {
 		this.nom = nom;
 		this.sexe = Math.random() < 0.5 ? Sexe.MALE : Sexe.FEMELLE;
-		this.poids = (float) (Math.random() * (getPoidsMax() - getPoidsMin()) + getPoidsMin());
-		this.taille = (float) (Math.random() * (getTailleMax() - getTailleMin()) + getTailleMin());
+		this.poids = (float) (Math.random()*(POIDS_MAX-POIDS_MIN)+POIDS_MIN);
+		this.taille = (float) (Math.random() * (TAILLE_MAX - TAILLE_MIN) + TAILLE_MIN);
 		this.age = (int) (Math.random() * (AGE_MAX - AGE_MIN) + AGE_MIN);
 		this.faim = false;
 		this.sommeil = false;

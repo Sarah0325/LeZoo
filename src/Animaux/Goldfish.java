@@ -1,8 +1,8 @@
 package Animaux;
 import java.util.Random;
 public class Goldfish extends Ovipare{
-	static enum PrenomF{Ange,Andree,Alan,Artur,Alfred,Aristide,Armand,Aymeric,Adam,Archie,Anton};	
-	static enum PrenomM{Astrid,Alex,Abby,Angela,Anita,Ariana,Aude,Amanda,};
+	static enum PrenomM{Ange,Andree,Alan,Artur,Alfred,Aristide,Armand,Aymeric,Adam,Archie,Anton};	
+	static enum PrenomF{Astrid,Alex,Abby,Angela,Anita,Ariana,Aude,Amanda,};
 	static float POIDS_MAX=1.5f;
 	static float POIDS_MIN =0.1f;
 	static float TAILLE_MAX=0.40f;
@@ -11,7 +11,7 @@ public class Goldfish extends Ovipare{
 	static int AGE_MIN=1;
 
 	public Goldfish() {
-		super(nom, sexe, POIDS_MAX, POIDS_MAX, AGE_MAX, aerien, aerien, aerien);
+		super(nom,sexe, POIDS_MAX, POIDS_MIN ,TAILLE_MAX, TAILLE_MIN, AGE_MAX, AGE_MIN);
 		aquatique = true;
 		Random r = new Random(); 
 		if (sexe == Sexe.FEMELLE ) {
